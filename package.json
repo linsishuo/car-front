@@ -3,15 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:test": "vue-cli-service build --mode test",
+    "build:prod": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "report": "vue-cli-service build --report"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "axios": "^0.27.2",
+    "compression-webpack-plugin": "6.1.1",
+    "core-js": "^3.25.1",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.54.9",
+    "sass-loader": "^13.0.2",
+    "vant": "^2.12.49",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "weixin-js-sdk": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,12 +31,17 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.5",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "prettier": "^2.4.1",
-    "vue-template-compiler": "^2.6.14"
+    "script-ext-html-webpack-plugin": "^2.1.5",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-bundle-analyzer": "^4.6.1"
   },
   "eslintConfig": {
     "root": true,
@@ -46,6 +61,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not ie <= 8"
   ]
 }
